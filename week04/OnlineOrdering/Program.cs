@@ -13,7 +13,7 @@ class Program
 
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
-        Console.WriteLine("Total Price: Php" + (order1.GetTotalPrice()*55)); // using Php as peso symbol
+        Console.WriteLine("Total Price: Php " + String.Format("{0:N2}",(order1.GetTotalPrice()*55))); // using Php as peso symbol and converted the dollar to peso
 
         Console.WriteLine();
 
@@ -26,6 +26,6 @@ class Program
 
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
-        Console.WriteLine("Total Price: $" + order2.GetTotalPrice());
+        Console.WriteLine("Total Price: " + string.Format("{0:C}",order2.GetTotalPrice()));
     }
 }
